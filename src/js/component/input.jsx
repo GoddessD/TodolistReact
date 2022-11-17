@@ -6,11 +6,12 @@ export const Input = (props) => {
 		if (e.key === "Enter" && inputValue!= "" ){
 			let newList = props.list.concat({label:inputValue,done:false})
 			props.setList(newList)
+			setInputValue("")
 		}
 	}
 		return (
 		<div className="text-center">
-		<Input onChange={e=>setInputValue(e.target.Value)} onKeyPress={e=>addItem(e)} />	
+		<Input onChange={e=>setInputValue(e.target.Value)} onKeyPress={e=>addItem(e)} value={inputValue} />	
 		</div>
 	);
 };

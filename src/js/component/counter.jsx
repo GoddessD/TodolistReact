@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Input = () => {
+export const Counter = () => {
 	return (
 		<div className="text-center">
 			
